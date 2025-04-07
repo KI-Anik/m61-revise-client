@@ -9,7 +9,7 @@ const SignIn = () => {
     const { singInUser } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    console.log('in signIn page', location)
+    // console.log('in signIn page', location)
     const from = location.state || '/';
 
     const handleSignIn = e => {
