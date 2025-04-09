@@ -38,14 +38,14 @@ const AuthProvider = ({ children }) => {
             if (currentUser?.email) {
                 const user = { email: currentUser.email }
 
-                axios.post('http://localhost:5000/jwt', user, { withCredentials: true })
+                axios.post('https://job-portal-server-for-recruiter-part3-gamma-weld.vercel.app/jwt', user, { withCredentials: true })
                     .then(res => {
                         console.log('log in',res.data)
                         setLoading(false)
                     })
             }
             else {
-                axios.post('http://localhost:5000/logout', {}, { withCredentials: true })
+                axios.post('https://job-portal-server-for-recruiter-part3-gamma-weld.vercel.app/logout', {}, { withCredentials: true })
                     .then(res => {
                         console.log('log Out',res.data)
                         setLoading(false)
